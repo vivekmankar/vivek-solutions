@@ -1,420 +1,420 @@
-﻿//using System.IO;
-//using System;
+﻿using System.IO;
+using System;
 
-//class Program
-//{
-//    static void Main()
-//    {
-//        Console.WriteLine("Hello, World!");
-//        printTriangle(5);
-//    }
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+        printTriangle(5);
+    }
 
-//    private static void printTriangle(int n)
-//    {
+    private static void printTriangle(int n)
+    {
 
-//        //validate input
+        //validate input
 
-//        if (n > 0)
-//        {
+        if (n > 0)
+        {
 
-//            int level = 1;
+            int level = 1;
 
-//            int spaces = n;
+            int spaces = n;
 
-//            for (int i = 1; i < n; i++)
+            for (int i = 1; i < n; i++)
 
-//            {
+            {
 
-//                spaces -= 1;
+                spaces -= 1;
 
-//                //getting space to add in each level
+                //getting space to add in each level
 
-//                string inter_space = new String(' ', spaces);
+                string inter_space = new String(' ', spaces);
 
-//                //computing the number of stars at each level
+                //computing the number of stars at each level
 
-//                string stars = new String('*', (level * 2) - 1);
+                string stars = new String('*', (level * 2) - 1);
 
-//                Console.WriteLine(inter_space + stars + inter_space + "\n");
-//                Console.ReadKey();
+                Console.WriteLine(inter_space + stars + inter_space + "\n");
+                Console.ReadKey();
 
-//                //updating level 
+                //updating level 
 
-//                level++;
+                level++;
 
-//            }
+            }
 
-//        }
-//        else
-//        {
+        }
+        else
+        {
 
-//            Console.WriteLine("Please provide valide input to print a triagle");
+            Console.WriteLine("Please provide valide input to print a triagle");
 
 
 
-//        }
+        }
 
-//    }
+    }
 
-//}
+}
 
-//================================================================================================
+================================================================================================
 
-//using System.IO;
-//using System;
+using System.IO;
+using System;
 
-//class Program
-//{
-//    static void Main()
-//    {
-//        Console.WriteLine("Hello, World!");
-//        getOddNumSeries(5);
-//    }
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+        getOddNumSeries(5);
+    }
 
-//    private static void getOddNumSeries(int n)
-//    {
+    private static void getOddNumSeries(int n)
+    {
 
-//        //empty array to store odd elements
+        //empty array to store odd elements
 
-//        int[] oddNumbers = new int[n];
+        int[] oddNumbers = new int[n];
 
-//        int count = 0;
+        int count = 0;
 
-//        int numbers = 1;
+        int numbers = 1;
 
-//        int seriesSum = 0;
+        int seriesSum = 0;
 
-//        //loop till the N value
+        //loop till the N value
 
-//        while (count < n)
-//        {
+        while (count < n)
+        {
 
-//            //check if number is odd
+            //check if number is odd
 
-//            if (numbers % 2 != 0)
-//            {
+            if (numbers % 2 != 0)
+            {
 
-//                //compute the sum
+                //compute the sum
 
-//                seriesSum += numbers;
+                seriesSum += numbers;
 
-//                //add odd number to array
+                //add odd number to array
 
-//                oddNumbers[count] = numbers;
+                oddNumbers[count] = numbers;
 
-//            }
+            }
 
-//            //incremet by 2 as its odd numbers
+            //incremet by 2 as its odd numbers
 
-//            numbers += 2;
+            numbers += 2;
 
-//            //updating counter
+            //updating counter
 
-//            count++;
+            count++;
 
-//        }
+        }
 
-//        Console.WriteLine("The odd numbers are: " + string.Join(",", oddNumbers));
+        Console.WriteLine("The odd numbers are: " + string.Join(",", oddNumbers));
 
-//        Console.WriteLine(seriesSum);
-//        Console.ReadKey();
+        Console.WriteLine(seriesSum);
+        Console.ReadKey();
 
 
-//    }
+    }
 
 
 
-//    private static void printSeriesSum(int n2)
-//    {
+    private static void printSeriesSum(int n2)
+    {
 
-//        //validate input
+        //validate input
 
-//        if (n2 > 0)
-//        {
+        if (n2 > 0)
+        {
 
-//            getOddNumSeries(n2);
+            getOddNumSeries(n2);
 
 
 
-//        }
-//        else
-//        {
+        }
+        else
+        {
 
-//            Console.WriteLine("Please provide valide input");
+            Console.WriteLine("Please provide valide input");
 
 
 
-//        }
+        }
 
-//    }
+    }
 
-//}
+}
 
-//////===============================================================================================================
-//using System.IO;
-//using System;
+////===============================================================================================================
+using System.IO;
+using System;
 
-//class Program
-//{
-//    static void Main()
-//    {
-//        int[] A = new int[] { 1, 7, 2, 6 };
-//        bool check = monotonicCheck(A);
-//        Console.WriteLine(check);
-//        Console.ReadKey();
+class Program
+{
+    static void Main()
+    {
+        int[] A = new int[] { 1, 7, 2, 6 };
+        bool check = monotonicCheck(A);
+        Console.WriteLine(check);
+        Console.ReadKey();
 
-//    }
+    }
 
-//    private static bool monotonicCheck(int[] arr)
-//    {
+    private static bool monotonicCheck(int[] arr)
+    {
 
-//        //validate input
+        //validate input
 
-//        if (arr.Length > 0)
-//        {
+        if (arr.Length > 0)
+        {
 
 
 
-//            //decide the inital directio
+            //decide the inital directio
 
-//            bool isPositive = arr[0] < arr[1];
+            bool isPositive = arr[0] < arr[1];
 
-//            bool isMonotonic = true;
+            bool isMonotonic = true;
 
-//            //looping on array
+            //looping on array
 
-//            for (int i = 0; i < arr.Length - 1; i++)
-//            {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
 
-//                //check for positve montonocity
+                //check for positve montonocity
 
-//                if (isPositive)
-//                {
+                if (isPositive)
+                {
 
-//                    if (arr[i] <= arr[i + 1])
-//                    {
+                    if (arr[i] <= arr[i + 1])
+                    {
 
-//                        isMonotonic = true;
+                        isMonotonic = true;
 
-//                    }
-//                    else
-//                    {
+                    }
+                    else
+                    {
 
-//                        return false;
+                        return false;
 
-//                    }
+                    }
 
-//                }
-//                else
-//                {
+                }
+                else
+                {
 
-//                    if (arr[i] >= arr[i + 1])
-//                    {
+                    if (arr[i] >= arr[i + 1])
+                    {
 
-//                        isMonotonic = true;
+                        isMonotonic = true;
 
-//                    }
-//                    else
-//                    {
+                    }
+                    else
+                    {
 
-//                        return false;
+                        return false;
 
-//                    }
+                    }
 
-//                }
+                }
 
-//            }
+            }
 
-//            return isMonotonic;
+            return isMonotonic;
 
 
 
-//        }
-//        else
-//        {
+        }
+        else
+        {
 
-//            Console.WriteLine("Please provide valide input");
+            Console.WriteLine("Please provide valide input");
 
-//            return false;
+            return false;
 
-//        }
+        }
 
 
-//    }
-//}
+    }
+}
 
 
-//////================================================================================================
+////================================================================================================
 
-//using System.IO;
-//using System;
+using System.IO;
+using System;
 
-//class Program
-//{
-//    static void Main()
-//    {
-//        int[] nums = new int[] { 3, 1, 4, 1, 5 };
-//        int k = 2;
-//        int pairs = diffPairs(nums, k);
-//        Console.WriteLine(pairs);
+class Program
+{
+    static void Main()
+    {
+        int[] nums = new int[] { 3, 1, 4, 1, 5 };
+        int k = 2;
+        int pairs = diffPairs(nums, k);
+        Console.WriteLine(pairs);
 
-//    }
+    }
 
-//    private static int diffPairs(int[] nums, int k)
-//    {
+    private static int diffPairs(int[] nums, int k)
+    {
 
-//        //validate input
+        //validate input
 
-//        if (nums.Length > 0 && k >= 0)
-//        {
+        if (nums.Length > 0 && k >= 0)
+        {
 
-//            int numberOfPairs = 0;
+            int numberOfPairs = 0;
 
-//            int length = nums.Length;
+            int length = nums.Length;
 
-//            int cantorIndex = 0;
+            int cantorIndex = 0;
 
-//            //computing length to store unique values n*(n-1)*0.5
+            //computing length to store unique values n*(n-1)*0.5
 
-//            int cantorLength = (int)(length * (length - 1) * 0.5);
+            int cantorLength = (int)(length * (length - 1) * 0.5);
 
-//            double[] CantorValues = new double[cantorLength];
+            double[] CantorValues = new double[cantorLength];
 
-//            for (int i = 0; i <= nums.Length - 1; i++)
-//            {
+            for (int i = 0; i <= nums.Length - 1; i++)
+            {
 
-//                for (int j = i + 1; j <= nums.Length - 1; j++)
-//                {
+                for (int j = i + 1; j <= nums.Length - 1; j++)
+                {
 
-//                    //calculating unique values for each pair using Cantor pairing fucntion
+                    //calculating unique values for each pair using Cantor pairing fucntion
 
-//                    double uniqueValue = 0.5 * (nums[i] + nums[j]) * (nums[i] + nums[j] + 1) + nums[j];
+                    double uniqueValue = 0.5 * (nums[i] + nums[j]) * (nums[i] + nums[j] + 1) + nums[j];
 
-//                    //check if pair exists 
+                    //check if pair exists 
 
-//                    if (Array.IndexOf(CantorValues, uniqueValue) == -1)
-//                    {
+                    if (Array.IndexOf(CantorValues, uniqueValue) == -1)
+                    {
 
-//                        if (nums[i] - nums[j] == k || -1 * (nums[i] - nums[j]) == k)
-//                        {
+                        if (nums[i] - nums[j] == k || -1 * (nums[i] - nums[j]) == k)
+                        {
 
-//                            numberOfPairs++;
+                            numberOfPairs++;
 
-//                        }
+                        }
 
-//                    }
+                    }
 
-//                    //update unique pair values in array
+                    //update unique pair values in array
 
-//                    CantorValues[cantorIndex] = uniqueValue;
+                    CantorValues[cantorIndex] = uniqueValue;
 
-//                    cantorIndex++;
+                    cantorIndex++;
 
 
 
-//                }
+                }
 
 
 
-//            }
+            }
 
-//            return numberOfPairs;
+            return numberOfPairs;
 
 
 
 
 
-//        }
-//        else
-//        {
+        }
+        else
+        {
 
-//            Console.WriteLine("Please provide valide input");
+            Console.WriteLine("Please provide valide input");
 
-//            return 0;
+            return 0;
 
-//        }
+        }
 
 
-//    }
-//}
+    }
+}
 
-//////==================================================================================================
-//using System.IO;
-//using System;
+////==================================================================================================
+using System.IO;
+using System;
 
-//class Program
-//{
-//    static void Main()
-//    {
-//        string keyboard = "abcdefghijklmnopqrstuvwxyz";
-//        string word = "dis";
-//        int time = BUllsKeboard(keyboard, word);
-//        Console.WriteLine(time);
+class Program
+{
+    static void Main()
+    {
+        string keyboard = "abcdefghijklmnopqrstuvwxyz";
+        string word = "dis";
+        int time = BUllsKeboard(keyboard, word);
+        Console.WriteLine(time);
 
 
-//    }
+    }
 
-//    private static int BUllsKeboard(string keyboard, string word)
-//    {
+    private static int BUllsKeboard(string keyboard, string word)
+    {
 
-//        //validate input
+        //validate input
 
-//        if (keyboard.Length > 0 && word.Length >= 0)
-//        {
+        if (keyboard.Length > 0 && word.Length >= 0)
+        {
 
-//            int totalTime = 0;
+            int totalTime = 0;
 
-//            int prevIndex = 0;
+            int prevIndex = 0;
 
-//            int currentIndex = 0;
+            int currentIndex = 0;
 
-//            int distanceTravel = 0;
+            int distanceTravel = 0;
 
-//            int keyBoardLength = keyboard.Length;
+            int keyBoardLength = keyboard.Length;
 
-//            //loop through word 
+            //loop through word 
 
-//            foreach (char letter in word)
-//            {
+            foreach (char letter in word)
+            {
 
 
 
-//                currentIndex = keyboard.IndexOf(letter);
+                currentIndex = keyboard.IndexOf(letter);
 
-//                //calculate the distance travel
+                //calculate the distance travel
 
-//                distanceTravel = currentIndex - prevIndex;
+                distanceTravel = currentIndex - prevIndex;
 
-//                //incase travel in -ve direction
+                //incase travel in -ve direction
 
-//                if (distanceTravel < 0)
-//                {
+                if (distanceTravel < 0)
+                {
 
-//                    distanceTravel = distanceTravel * -1;
+                    distanceTravel = distanceTravel * -1;
 
-//                }
+                }
 
-//                totalTime += distanceTravel;
+                totalTime += distanceTravel;
 
-//                prevIndex = currentIndex;
+                prevIndex = currentIndex;
 
-//            }
+            }
 
-//            return totalTime;
+            return totalTime;
 
-//        }
-//        else
-//        {
+        }
+        else
+        {
 
-//            Console.WriteLine("Please provide valide input");
+            Console.WriteLine("Please provide valide input");
 
-//            return 0;
+            return 0;
 
-//        }
+        }
 
 
-//    }
-//}
+    }
+}
 
 
 
@@ -428,7 +428,7 @@
 
 
 
-//===========================================================================
+===========================================================================
 using System.IO;
 using System;
 using System.Collections.Generic;
@@ -451,26 +451,26 @@ class Program
     private static int BUllsKeboard(string str1, string str2)
     {
 
-        //validate input
+        validate input
 
         if (str1.Length > 0 && str2.Length >= 0)
         {
 
             int numberOfAdjustments = 0;
 
-            //get unique values
+            get unique values
 
             var h = new HashSet<char>(str2);
 
             var h2 = new HashSet<char>(str1);
 
-            //converting sets to array
+            converting sets to array
 
             char[] uniqueChar = h.ToArray();
 
             char[] uniqueChar2 = h2.ToArray();
 
-            //creating dictionary to map frequency of letter in a word
+            creating dictionary to map frequency of letter in a word
 
             Dictionary<char, int> str2Digest = new Dictionary<char, int>();
 
@@ -478,9 +478,9 @@ class Program
 
 
 
-            //create digest for str2
+            create digest for str2
 
-            //map frequency of letter in str1
+            map frequency of letter in str1
 
             for (int i = 0; i < uniqueChar.Length - 1; i++)
             {
@@ -495,7 +495,7 @@ class Program
 
                         letterCount++;
 
-                        //check if key exists and update the count
+                        check if key exists and update the count
 
                         if (str2Digest.ContainsKey(uniqueChar[i]))
                         {
@@ -518,9 +518,9 @@ class Program
 
 
 
-            //create a digest for str1
+            create a digest for str1
 
-            //map frequency of letter in str1
+            map frequency of letter in str1
 
             for (int i = 0; i < uniqueChar2.Length - 1; i++)
             {
@@ -535,7 +535,7 @@ class Program
 
                         letterCount++;
 
-                        //check if key exists and update the count
+                        check if key exists and update the count
 
                         if (str1Digest.ContainsKey(uniqueChar2[i]))
                         {
@@ -562,7 +562,7 @@ class Program
 
             {
 
-                //compare now both the digest
+                compare now both the digest
 
                 if (str1Digest.ContainsKey(item.Key))
                 {
